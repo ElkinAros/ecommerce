@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 0 20px; 
+    background-color: black;
+    color: white;
+    height: 60px; 
+    position: relative;
+}
+
+header .titulo {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+    max-width: 1200px; 
+}
+
+header h1 {
+    margin: 0;
+    padding-right: 20px; 
+}
+
+#cartButton {
+    position: absolute; 
+    right: 20px; 
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.tituloProductos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tituloProductos h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    
+}
+
+.producto {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+#carrito {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Consultas de medios (Responsive Design) */
+@media (max-width: 824px) and (min-width: 770px) {
+    #productos {
+        justify-content: space-around;
+    }
+
+    .producto {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    #productos {
+        flex-direction: column;
+    }
+
+    .producto {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    #carrito {
+        width: 100%;
+    }
+}
